@@ -1,0 +1,18 @@
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="/css/order.css")
+    link(rel="stylesheet" href="/css/input.css")
+    title Login
+  body(onload="init()")
+    include ../partial/header.pug
+    .main
+      h1 Log in
+      .sb
+        label(for="username") Username:
+        input#username(type="textbox")
+      .sb
+        label(for="password") Password:
+        input#password(type="password")
+      button#submit Log in
+    script(src="/js/login.js")

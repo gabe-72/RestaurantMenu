@@ -1,0 +1,24 @@
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="/css/order.css")
+    link(rel="stylesheet" href="/css/input.css")
+    title Order Details
+  body(onload="init()")
+    include ../partial/header.pug
+    .main
+      h1 Order Details
+      .la
+        | Placed by: 
+        a(href="/users/"+order.user._id) #{order.user.username}
+        br
+        | Restaurant Name: #{order.restaurant}
+        h2 Items:
+        each [key, value] of order.items
+          | #{value.quantity} x #{value.name}
+          br
+        h2 Summary:
+        | Subtotal: $ #{Number(order.subtotal).toFixed(2)} <br>
+        | Tax: $ #{Number(order.tax).toFixed(2)} <br>
+        | Delivery fee: $ #{Number(order.delivery_fee).toFixed(2)} <br>
+        | Total: $ #{Number(order.total).toFixed(2)}

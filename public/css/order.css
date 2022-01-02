@@ -1,0 +1,139 @@
+* {
+  color: white;
+  font-family: Garamond;
+}
+
+h1 {
+  font-size: 48px;
+  border-bottom: 2px solid white;
+  margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+a:hover {
+  color:rgb(221, 221, 221);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 5% auto;
+  background-image: url("/images/restaurant-image.png");
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  gap: 10px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  display: inline-block;
+  background-color: rgba(19, 19, 19, 0.9);
+  padding: 20px 0px;
+  height: fit-content;
+}
+
+.main {
+  grid-column: 2 / 3;
+  display: inline-block;
+  padding: 25px 50px 50px;
+  background-color: rgba(19, 19, 19, 0.9);
+  height: fit-content;
+}
+
+.summary {
+  grid-column: 3 / 4;
+  display: inline-block;
+  background-color: rgba(19, 19, 19, 0.9);
+  height: fit-content;
+  padding: 15px;
+}
+
+.summaryText {
+  padding: 10px 0px;
+}
+
+/* left align */
+.la {
+  text-align: left;
+}
+
+/* inline */
+.in {
+  display: inline-block;
+}
+
+/* space between */
+.sb {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#add_category {
+  padding: 0.2em 1.0em;
+}
+
+#addDesc {
+  resize: none;
+  overflow: hidden;
+}
+
+#categories {
+  width: 11.1em;
+}
+
+#restaurants {
+  width: 80%;
+  font-size: 1em;
+  background-color: black;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.itemDesc {
+  color: rgb(206, 206, 206);
+  padding-bottom: 5px;
+}
+
+button.smallBtn {
+  margin: 0px 2px;
+  padding: 0.1em 0.5em;
+}
+
+.visible {
+  display: "";
+}
+
+.invisible {
+  display: none;
+}

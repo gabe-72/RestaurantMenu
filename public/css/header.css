@@ -1,0 +1,10 @@
+#header {
+    grid-column: 1/4;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px 200px;
+    position: sticky;
+    height: fit-content;
+    top: 0;
+    background-color: rgb(19, 19, 19);
+}

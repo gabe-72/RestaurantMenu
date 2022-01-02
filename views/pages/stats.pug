@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="order.css")
+    title Stats
+  body
+    include ../partial/header.pug
+    .menu
+      h1 Restaurant Statistics
+      each rest, name in stats
+        h2 #{name}
+        | Total number of orders: #{rest.numOrders} <br>
+        | Average order total: $ 
+        if (rest.numOrders === 0)
+            | 0.00
+        else
+            | #{Number(rest.total/rest.numOrders).toFixed(2)}
+        br
+        | Most Popular item: #{rest.popular} <br>
+        br

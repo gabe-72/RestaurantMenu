@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="/css/order.css")
+    link(rel="stylesheet" href="/css/input.css")
+    title Order Form
+  body(onload="init()")
+    include ../partial/header.pug
+    .sidebar
+      select#restaurants
+      nav#menu-links
+    .main
+      h1 Menu
+      #items
+    .summary
+      h2 Order Summary
+      #cartItems.dishList.la
+      button#submit Place Order
+    script(src="/js/orderform.js")

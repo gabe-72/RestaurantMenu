@@ -1,0 +1,13 @@
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="/css/order.css")
+    link(rel="stylesheet" href="/css/input.css")
+    title Users
+  body
+    include ../partial/header.pug
+    .main
+      h1 Users
+      each u in users
+        a(href="/users/"+u._id) #{u.username}
+        br

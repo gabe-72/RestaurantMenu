@@ -1,0 +1,11 @@
+link(rel="stylesheet" href="/css/header.css")
+#header
+  a(href="/") Homepage
+  a(href="/users") Users
+  if user.loggedin
+    a(href="/orderform") Order
+    a(href="/users/"+user.userid) My Profile
+    a(href="/logout") Log out
+  else
+    a(href="/register") Register
+    a(href="/login") Log in
